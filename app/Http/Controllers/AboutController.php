@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class AboutController extends Controller
 {
     public function about(){
-        echo "Nama : Pramudya Wibowo <br> NIM : 1941720054";
+        return redirect('https://www.educastudio.com/about-us');
     }
 }
