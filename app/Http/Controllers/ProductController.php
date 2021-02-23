@@ -7,15 +7,23 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function edugames(){
-        echo "Marbel Edu Games <a href='https://www.educastudio.com/category/marbel-edu-games'><button>KLIK!</button></a>";
+        return view('product')
+                    ->with('page', 'Marbel Edu Games')
+                    ->with('url','https://www.educastudio.com/category/marbel-edu-games');
     }
     public function friendskidsgames(){
-        echo "Marbel and Friends Kids Games <a href='https://www.educastudio.com/category/marbel-and-friends-kids-games'><button>KLIK!</button></a>";
+        return view('product')
+                    ->with('page', 'Marbel and Friends')
+                    ->with('url','https://www.educastudio.com/category/marbel-and-friends-kids-games');
     }
     public function riristorybooks(){
-        echo "Riri Story Books <a href='https://www.educastudio.com/category/riri-story-books'><button>KLIK!</button></a>";
+        return view('product')
+                    ->with('page', 'Riri Story Books')
+                    ->with('url','https://www.educastudio.com/category/riri-story-books');
     }
     public function kolakkidssongs(){
-        echo "Kolakkidssongs <a href='https://www.educastudio.com/category/kolak-kids-songs'><button>KLIK!</button></a>";
+        return view('product')
+                    ->with('page', 'Kolak Kids Songs')
+                    ->with('url','https://www.educastudio.com/category/kolak-kids-songs');
     }
 }

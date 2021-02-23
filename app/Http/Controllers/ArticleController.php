@@ -11,10 +11,14 @@ class ArticleController extends Controller
     }
 
     public function news(){
-        return redirect('https://www.educastudio.com/news');
+        return view('news')
+                    ->with('page', 'News')
+                    ->with('url', 'news');
     }
 
     public function newsString($string){
-        return redirect("https://www.educastudio.com/news/" . $string );
+        return view('news')
+                    ->with('page', 'News ' . $string)
+                    ->with('url', 'news/' . $string);
     }
 }
