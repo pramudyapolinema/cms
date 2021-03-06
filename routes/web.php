@@ -24,6 +24,8 @@ use App\Http\Controllers\NewsController;
 
 Route::get('/', [HomeController::class, 'index']);
 
+// Route::get('/{slug}', )
+
 Route::get('/contact-us', [ContactController::class, 'index']);
 
 Route::get('/today-special', [TodaySpecialController::class, 'index']);

@@ -16,22 +16,19 @@
     <div>
         <div class="tm-menu-product-content col-lg-10 col-md-10">
             <!-- menu content -->
-            <?php 
-                for($i = 1; $i < 6; $i++){
-                ?>
+            @foreach($menus as $menu)
             <div class="tm-product">
                 <img src="img/menu-<?php echo rand(1,5)?>.jpg" alt="Product">
                 <div class="tm-product-text">
-                    <h3 class="tm-product-title">Americano <?php echo $i?></h3>
-                    <p class="tm-product-description">Maecenas tempus, tellus eget condimentum rhoncus, sem quam
-                        semper libero, sit amet adipiscing sem neque. Red ipsum.</p>
+                    <h3 class="tm-product-title">{{$menu -> nama}}</h3>
+                    <p class="tm-product-description">{{$menu -> deskripsi}}</p>
                 </div>
                 <div class="tm-product-price">
                     <a href="#" class="tm-product-price-link tm-handwriting-font"><span
-                            class="tm-product-price-currency">$</span><?php echo rand(10,72)?></a>
+                            class="tm-product-price-currency">$</span>{{$menu -> harga}}</a>
                 </div>
             </div>
-            <?php }?>
+            @endforeach
         </div>
     </div>
 </section>

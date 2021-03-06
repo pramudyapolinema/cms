@@ -7,52 +7,60 @@
         </div>
     </div>
     <div class="col-lg-12 tm-special-container margin-top-60">
+    @foreach($menus as $menu)
+    @if ($menu -> id == 1)
         <div class="tm-special-container-left">
             <!-- left -->
             <div class="tm-special-item">
                 <div class="tm-special-img-container">
-                    <img src="img/special-1.jpg" alt="Special" class="tm-special-img img-responsive">
+                    <img src="img/{{$menu -> foto}}" alt="Special" class="tm-special-img img-responsive">
                     <a href="#">
                         <div class="tm-special-description">
-                            <h3 class="tm-special-title">Donec pede justo</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                            <h3 class="tm-special-title">{{$menu -> nama}}</h3>
+                            <p>{{$menu -> deskripsi}}</p>
                         </div>
                     </a>
                 </div>
             </div>
         </div>
+    @endif
         <div class="tm-special-container-right">
+        @if ($menu -> id == 2)
             <!-- right -->
             <div>
                 <div class="tm-special-item">
                     <div class="tm-special-img-container">
-                        <img src="img/special-2.jpg" alt="Special" class="img-responsive">
+                        <img src="img/{{$menu -> foto}}" alt="Special" class="img-responsive">
                         <a href="#">
                             <div class="tm-special-description">
-                                <h3 class="tm-special-title">Etiam sit amet</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                                <h3 class="tm-special-title">{{$menu -> nama}}</h3>
+                                <p>{{$menu -> deskripsi}}</p>
                             </div>
                         </a>
                     </div>
                 </div>
             </div>
+        @endif
+        @if ($menu -> id == 3)
             <div class="tm-special-container-lower">
                 <div class="tm-special-item">
                     <div class="tm-special-img-container">
-                        <img src="img/special-3.jpg" alt="Special" class="img-responsive">
+                        <img src="img/{{$menu -> foto}}" alt="Special" class="img-responsive">
                         <a href="#">
                             <div class="tm-special-description">
-                                <p>Vivamus elementum</p>
+                                <p>{{$menu -> nama}}</p>
                             </div>
                         </a>
                     </div>
                 </div>
+        @endif
+        @if ($menu -> id == 4)
                 <div class="tm-special-item">
                     <div class="tm-special-img-container">
-                        <img src="img/special-4.jpg" alt="Special" class="img-responsive">
+                        <img src="img/{{$menu -> foto}}" alt="Special" class="img-responsive">
                         <a href="#">
                             <div class="tm-special-description">
-                                <p>Quisque rutrum.</p>
+                                <p>{{$menu -> nama}}</p>
                             </div>
                         </a>
                     </div>
@@ -61,3 +69,5 @@
         </div>
     </div>
 </section>
+@endif
+@endforeach
